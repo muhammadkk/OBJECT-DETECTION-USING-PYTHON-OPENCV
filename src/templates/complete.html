@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_process.css') }}">
+  
+
+</head>
+<body  id="canvas">
+
+    <center>
+    <div class="div2">
+
+ <h3 id="text1"> file uploaded</h3>
+<!-- <video src="{{ url_for('send_video', filename =image_name) }} ">-->
+
+<form onsubmit="cls()"  id="process-form" action="{{ url_for('process', filename =image_name) }}" method="POST" enctype="multipart/form-data">
+    <input type='text' name="output" placeholder='Output File Name ' required>
+ <input onclick="this.style.visibility= 'hidden';change(this);" type="submit" class='btn btn-warning' value="Process!" id="process-button">
+ </form>
+    </div>
+
+     <div  class="loader-wrapper" id="loader-4">
+        <div id="loader">L</div>
+        <div id="loader">O</div>
+        <div id="loader">A</div>
+        <div id="loader">D</div>
+        <div id="loader">I</div>
+        <div id="loader">N</div>
+        <div id="loader">G</div>
+    </div>
+       <!--{% if results%}
+        <div id="time1">
+            <p> PROCESS WILL TAKE {{ time1 }} minutes</p>
+        </div>
+        {% endif %}-->
+
+    
+    
+    
+  
+        <div>
+            <div>
+                <div>
+                </div>
+            </div>
+        </div>
+  
+
+
+    </center>
+
+
+           <script>
+    loaders = document.getElementsByClassName('loader-wrapper');
+    loaders[0].style.display = "none";
+
+    function cls(){
+    document.getElementById("canvas").style.background = "{{ url_for('static', filename='css/loading.jpg') }}";
+    document.getElementsByClassName("div2")[0].style.display = 'none';
+
+    };
+
+
+
+    function change(self) {
+        for (var i = loaders.length - 1; i >= 0; i--) {
+            loaders[i].style.display = "inherit";
+        }
+        id = self.id;
+        loaders[id - 1].style.display = "inherit";
+
+    };
+
+    </script>
+</body>
+
+
+
+
+
+</html>

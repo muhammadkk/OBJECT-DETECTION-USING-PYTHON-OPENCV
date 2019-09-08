@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+         <link rel="stylesheet" href="{{ url_for('static', filename='css/style_finsh.css') }}">
+
+
+
+</head>
+<body>
+ <center>
+ <!--<div class="jumbotron" align="center">-->
+ <h3>completed</h3>
+     <img src="{{ url_for('static', filename='css/tick_green.png') }}">
+   <!--  <video src="{{ url_for('send_video', filename =video_name) }} "></video>-->
+
+<form id="process-form" action="{{ url_for('play_video', filename =image_name) }}" method="POST" enctype="multipart/form-data">
+
+ <input type="submit" class='btn btn-success' value="Play!" id="process-button">
+    <br>
+    <br>
+</form>
+
+
+
+
+
+
+     </center>
+</body>
+
+
+</html>

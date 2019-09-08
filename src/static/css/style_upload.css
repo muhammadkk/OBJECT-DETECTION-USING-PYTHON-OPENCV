@@ -1,0 +1,44 @@
+body{
+	background-image: url('upload.jpg');
+	 background-repeat: no-repeat;
+  background-size: 1367px 750px;;
+	padding: 0;
+	margin: 0;
+}
+#custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover {
+  background-color: #00b28f;
+}
+
+
+.div2 {
+	 border-left: 6px solid blue;
+  background-color: lightgrey;
+  opacity:0.6;
+  width: 300px;
+  position: absolute;
+   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;  
+  padding: 50px;
+  }
+strong{
+	font-size: 25px
+	
+}
+#file-picker {
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;

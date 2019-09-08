@@ -1,0 +1,19 @@
+body{
+	background-image: url('play.jpg');
+	 background-repeat: no-repeat;
+  background-size: 1367px 750px;;
+	padding: 0;
+	margin: 0;
+}
+#process-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#process-button:hover {
+  background-color: #00b28f;
+}
